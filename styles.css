@@ -1,7 +1,10 @@
 body{
     background-color:grey;
     margin:0;
-    
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
 }
 
 
@@ -11,17 +14,47 @@ h1{
     justify-content: center;
 }
 
+.buttons{
+    align-self: center;
+    padding:10px;
+    
+}
+
+.btn-change,.btn-reset{
+    border:3px solid black;
+    border-radius: 5px;
+    background-color: chartreuse;
+    padding:5px;
+}
+
+.main-container{
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 0;
+    height:auto;
+    border:2px solid black;
+}
 
 .container{
     display:flex;
     justify-content: center;
+    flex-grow:0;
+
 }
 
 .grids{
+    display: inline-block;
     background-color: #fff;
-    height:25px;
-    width:25px;
+    height:20px;
+    width:20px;
     margin: 0.5px 0.5px;
     border:2px solid black;
     border-radius: 5px;
+    flex-grow: 0;
+    flex-shrink: 2;
+}
+
+.grids.colored{
+    background-color: black;
 }
