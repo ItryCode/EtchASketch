@@ -1,0 +1,27 @@
+body{
+    background-color:grey;
+    margin:0;
+    
+}
+
+
+
+h1{
+    display:flex;
+    justify-content: center;
+}
+
+
+.container{
+    display:flex;
+    justify-content: center;
+}
+
+.grids{
+    background-color: #fff;
+    height:25px;
+    width:25px;
+    margin: 0.5px 0.5px;
+    border:2px solid black;
+    border-radius: 5px;
+}
