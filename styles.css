@@ -20,20 +20,26 @@ h1{
     
 }
 
-.btn-change,.btn-reset{
+.btn-change,.btn-reset,.btn-color{
     border:3px solid black;
     border-radius: 5px;
     background-color: chartreuse;
     padding:5px;
 }
 
+.btn-color{
+    border-radius: 150px;
+}
+
 .main-container{
-    padding:20px;
+ 
+    height:75vw;
+    
     display:flex;
     flex-direction: column;
     flex-grow: 0;
-    height:auto;
-    border:2px solid black;
+    
+ 
 }
 
 .container{

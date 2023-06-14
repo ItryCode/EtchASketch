@@ -1,6 +1,7 @@
 const board=document.querySelector('.main-container');
 const btnChange=document.querySelector('.btn-change');
 const btnReset=document.querySelector('.btn-reset');
+const btnColor=document.querySelector('.btn-color');
 
 let childDiv;
 let num=16;
@@ -26,7 +27,7 @@ function unmakeGrid(){
 
 function removeColor(){
     let containerList=document.querySelectorAll(".grids.colored");
-    containerList.forEach((child)=>{child.classList.remove('colored')});
+    containerList.forEach((child)=>{child.style.cssText='background-color:#FFFFFF'});
 }
 
 
@@ -49,13 +50,24 @@ function prompted(){
 
 
 
-//Events
+//Function to enable drawing on the grid
 function gridDraw(){
     let containerList=document.querySelectorAll(".grids");
-    containerList.forEach(child=>{child.addEventListener("mouseover",()=>{child.classList.add('colored')})});
+    containerList.forEach(child=>{child.addEventListener("mouseenter",()=>{child.classList.add('colored')})});
 }
-btnChange.addEventListener('click',prompted)
-btnReset.addEventListener('click',removeColor)
+
+
+function colorPicker(){
+    let chosenColor=document.querySelector("#input-color");
+    let containerList=document.querySelectorAll(".grids");
+    containerList.forEach(child=>{child.addEventListener("mouseenter",()=>{child.style.cssText=`background-color:${chosenColor.value}!important`})});
+    
+}
+
+
+btnChange.addEventListener('click',prompted)    //Button to change rowsxcoloumns in grid
+btnReset.addEventListener('click',removeColor)  //Button to reset the grid
+btnColor.addEventListener('click',colorPicker)
 
 
 
