@@ -20,7 +20,7 @@ h1{
     
 }
 
-.btn-change,.btn-reset,.btn-color{
+.btn-change,.btn-reset,.btn-colorm,.btn-random{
     border:3px solid black;
     border-radius: 5px;
     background-color: chartreuse;
@@ -54,7 +54,7 @@ h1{
     background-color: #fff;
     height:20px;
     width:20px;
-    margin: 0.5px 0.5px;
+    margin: -1.5px -1.5px;
     border:2px solid black;
     border-radius: 5px;
     flex-grow: 0;
